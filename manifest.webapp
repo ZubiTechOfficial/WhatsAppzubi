@@ -1,0 +1,174 @@
+{
+  "name": "WhatsAppzubi",
+  "display": "WhatsAppzubi",
+  "subtitle": "Simple. Personal. Secure.",
+  "description": " W﻿h﻿a﻿t﻿s﻿A﻿p﻿pzubi app available for KaiOS and other smartphones. W﻿h﻿a﻿t﻿s﻿A﻿p﻿pzubi uses your phone's Internet connection (mobile data or Wi-Fi, as available) to let you message friends and family. Switch from SMS to GB W﻿h﻿a﻿t﻿s﻿A﻿p﻿p to send and receive messages, photos, videos, and Voice Messages.\n\n*Data charges may apply. Contact your provider for details.",
+  "version": "2.2218.5",
+  "theme": "#2cab98",
+  "launch_path": "/index.html",
+  "type": "certified",
+  "cursor": false,
+  "priority": "high",
+  "developer": {
+    "name": "ZUBI Tech Official",
+    "url": "https://www.youtube.com/channel/UCKFj9R_L0byDWTSHSklA61g"
+  },
+  "permissions": {
+    "audio-capture": {
+      "description": "Required for recording audio message"
+    },
+    "video-capture": {
+      "description": "Required for recording video"
+    },
+    "audio-channel-content": {
+      "description": "Needed to play this app's audio content on the content channel"
+    },
+    "audio-channel-telephony": {
+      "description": "Needed to play this app's audio content on the telephony channel"
+    },
+    "audio-channel-notification": {
+      "description": "Needed to play this app's audio content on the notification channel"
+    },
+    "browser": {
+      "description": "Access to web pages, like legal, etc..."
+    },
+    "contacts": {
+      "description": "Required to load contacts",
+      "access": "readonly"
+    },
+    "desktop-notification": {
+      "description": "Required for displaying alerts when app is on background"
+    },
+    "device-storage:pictures": {
+      "access": "readwrite",
+      "description": "Required to store pictures"
+    },
+    "device-storage:videos": {
+      "access": "readwrite",
+      "description": "Required to store videos"
+    },
+    "device-storage:music": {
+      "access": "readwrite",
+      "description": "Required to store music"
+    },
+    "device-storage:sdcard": {
+      "access": "readwrite",
+      "description": "Required to store media in SDCard"
+    },
+    "device-storage:apps": {
+      "access": "readwrite",
+      "description": "Required to measure remaining free space"
+    },
+    "geolocation": {
+      "description": "Required to get user current position"
+    },
+    "webapps-manage": {},
+    "permissions": {},
+    "mobilenetwork": {
+      "description": "To detect mobile carrier and regional information."
+    },
+    "push": {
+      "description": "To receive notifications"
+    },
+    "serviceworker": {},
+    "sms": {},
+    "settings": {
+      "access": "readonly",
+      "description": "Required for Device Information"
+    },
+    "systemXHR": {
+      "description": "XHR needed for WA connection"
+    },
+    "storage": {
+      "description": "Unlimited storage"
+    },
+    "telephony": {
+      "description": "Required to control telephony functions"
+    },
+    "mobileconnection": {
+      "description": "Required to get carrier ids and a user country"
+    },
+    "wifi-manage": {
+      "description": "To distinguish between WiFi and cellular connections"
+    },
+    "feature-detection": {
+      "description": "To discover phone characteristics and supported features"
+    },
+    "moz-attention": {
+      "description": "Required to display attention window"
+    },
+    "power": {
+      "description": "Required to restart device in case if the storage seems to be corrupted"
+    },
+    "external-api": {}
+  },
+  "messages": [
+    {
+      "serviceworker-notification": "/notification.html"
+    }
+  ],
+  "default_locale": "en-US",
+  "locales": {
+    "en-US": {
+      "name": " W﻿h﻿a﻿t﻿s﻿A﻿p﻿pzubi",
+      "subtitle": "zubi Tech Official",
+      "description": " W﻿h﻿a﻿t﻿s﻿A﻿p﻿pzubi app available for KaiOS and other smartphones. W﻿h﻿a﻿t﻿s﻿A﻿p﻿pzubi uses your phone's Internet connection (mobile data or Wi-Fi, as available) to let you message friends and family. Switch from SMS to GB W﻿h﻿a﻿t﻿s﻿A﻿p﻿p to send and receive messages, photos, videos, and Voice Messages.\n\n*Data charges may apply. Contact your provider for details."
+    }
+  },
+  "icons": {
+    "56": "/icons/gbwhatsapp_56.png",
+    "84": "/icons/gbwhatsapp_84.png",
+    "112": "/icons/gbwhatsapp_112.png"
+  },
+  "orientation": "default",
+  "activities": {
+    "share": {
+      "href": "/notification.html",
+      "filters": {
+        "type": [
+          "video/*",
+          "image/*",
+          "text/vcard",
+          "text/plain"
+        ]
+      }
+    },
+    "view": {
+      "href": "/notification.html",
+      "filters": {
+        "type": "url",
+        "url": {
+          "required": true,
+          "pattern": "^https://(?:chat\\.whatsappzubi\\.com/(?:invite/)?[0-9A-Za-z]+|wa\\.me/[0-9]+(?:\\?text=.*)?)$",
+          "patternFlags": "i",
+          "regexp": "^https://(?:chat\\.whatsappzubi\\.com/(?:invite/)?[0-9A-Za-z]+|wa\\.me/[0-9]+(?:\\?text=.*)?)$"
+        }
+      }
+    },
+    "whatsappzubi_open": {
+      "href": "/notification.html",
+      "filters": {
+        "type": "url",
+        "url": {
+          "required": true
+        }
+      }
+    },
+    "new": {
+      "href": "/notification.html",
+      "filters": {
+        "type": "websms/sms",
+        "appname": "whatsappzubi"
+      }
+    }
+  },
+  "chrome": {
+    "statusbar": "overlap"
+  },
+  "csp": "default-src *; script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'; frame-src 'self' https://www.youtube.com",
+  "origin": "app://kaios.whatsappzubi.net",
+  "dependencies": {
+    "api-daemon": "1.4.26",
+    "wavoip2": "1.0.7"
+  }
+}
